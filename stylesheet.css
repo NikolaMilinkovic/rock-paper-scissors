@@ -23,6 +23,9 @@ body {
     background-color: inherit;
     background-image: url("thresh.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .choice-container,
