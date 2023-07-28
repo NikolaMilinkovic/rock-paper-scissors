@@ -42,6 +42,7 @@ body {
     background-color: rgba(0, 0, 0,0.6);
     /* background-color: rgb(17, 51, 56); */
     height: 100%;
+
 }
 
 .choice-container{
@@ -147,9 +148,10 @@ button {
 h1 {
     justify-content: center;
     display: flex;
-    flex: auto;
+    flex: 0 2 auto;
     margin: 1rem;
     animation: headerAnimation 3s;
+    text-align: center;
 }
 
 p {
@@ -165,6 +167,8 @@ p#winner-announcement {
     font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 46px;
     font-weight: bold;
+    text-align: center;
+
 }
 
 .result-container {
