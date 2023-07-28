@@ -15,6 +15,9 @@ body {
 }
 
 .page-container {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     background-color: inherit;
@@ -31,10 +34,11 @@ body {
     font-size: 30px;
     color: white;
     display: flex;
+    flex: auto;
     flex-direction: column;
     align-items: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 0%;
+    margin-right: 0%;
     background-color: rgba(0, 0, 0,0.6);
     /* background-color: rgb(17, 51, 56); */
     height: 100%;
@@ -43,10 +47,11 @@ body {
 .choice-container{
     margin-top: 2rem;
     display: flex;
+    flex: auto;
     flex-direction: row;
     justify-content: center;
     gap: 8%;
-    padding: 5rem 8rem;
+    padding: 5% 8%;
     width: 80%;
 }
 
@@ -127,6 +132,7 @@ button {
 .header {
     font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
+    flex: auto;
     justify-content: center;
     width: 100%;
     margin: 0px;
@@ -139,16 +145,23 @@ button {
 }
 
 h1 {
+    justify-content: center;
+    display: flex;
+    flex: auto;
     margin: 1rem;
     animation: headerAnimation 3s;
 }
 
 p {
+    display: flex;
+    flex: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
    
 }
 
 p#winner-announcement {
+    display: flex;
+    flex: auto;
     font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 46px;
     font-weight: bold;
