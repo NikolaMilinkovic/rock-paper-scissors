@@ -1,0 +1,264 @@
+
+@font-face {
+    font-family: 'nightmare_pillsregular';
+    src: url('nightmarepills-bv2w-webfont.woff2') format('woff2'),
+         url('nightmarepills-bv2w-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    background-color: inherit;
+    background-image: url("thresh.jpg");
+    background-size: cover;
+}
+
+.choice-container,
+.result-container {
+    animation: transitionIn 3s;
+}
+
+.content-container {
+    font-size: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgba(0, 0, 0,0.6);
+    /* background-color: rgb(17, 51, 56); */
+    height: 100%;
+}
+
+.choice-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8%;
+    padding: 5rem 8rem;
+    width: 80%;
+}
+
+.choice-img-container-rock,
+.choice-img-container-paper,
+.choice-img-container-scissors {
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    height: 100%;
+    width: 100%;
+    min-width: 50px;
+    max-height: 150px;
+    min-height: 50px;
+    max-width: 150px;
+    border: 0.2rem solid #ff0000;
+    border-radius: 2rem;
+    box-shadow: 0 0 .2rem #ff0000,
+            0 0 .1rem #ff0000,
+            0 0 1rem rgb(254, 19, 54),
+            0 0 0.4rem rgb(254, 19, 54),
+            0 0 1.4rem rgb(254, 19, 54),
+            inset 0 0 0.7rem rgb(254, 19, 54); 
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+button {
+    background-color: inherit;
+    border: 0rem;
+    border-radius: inherit;
+    box-sizing: inherit;
+}
+
+
+
+.choice-img-rock,
+.choice-img-paper,
+.choice-img-scissors {
+    min-width: 50px;
+    max-height: 150px;
+    min-height: 50px;
+    max-width: 150px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.choice-img-rock:hover {
+    animation: imgAnimation 0.5s forwards;
+    cursor: pointer;
+}
+
+.choice-img-paper:hover {
+    animation: imgAnimation 0.5s forwards;
+    cursor: pointer;
+}
+
+.choice-img-scissors:hover {
+    animation: imgAnimation 0.5s forwards;
+    cursor: pointer;
+}
+
+.choice-img-container-rock:hover {
+    animation: hoverEffects 0.5s forwards;
+}
+
+
+.choice-img-container-paper:hover {
+    animation: hoverEffects 0.5s forwards;
+}
+
+.choice-img-container-scissors:hover {
+    animation: hoverEffects 0.5s forwards;
+}
+
+.header {
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #282b2f;
+    color: #d31f37;
+    font-size: 38px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+h1 {
+    margin: 1rem;
+    animation: headerAnimation 3s;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+
+p#winner-announcement {
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.result-container {
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.num-of-rounds {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wins-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.wins-tracker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 7rem;
+    background-color: #282b2f;
+    border-top: 2px solid black;
+}
+
+.newbie-href {
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #282b2f;
+    border: 2px solid black;
+    color: #da2f47;
+    font-size: 24px;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.newbie-href:hover {
+    color: white;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes hoverEffects {
+    from {
+        border: 0.2rem solid #ff0000;
+        box-shadow: 0 0 .2rem #ff0000,
+            0 0 .1rem #ff0000,
+            0 0 1rem rgb(254, 19, 54),
+            0 0 0.4rem rgb(254, 19, 54),
+            0 0 1.4rem rgb(254, 19, 54),
+            inset 0 0 0.7rem rgb(254, 19, 54); 
+        background-color: rgb(0, 0, 0, 0.3);
+    }
+    to {
+        border: 0.2rem solid white;
+        box-shadow: 0 0 .4rem #ff0000,
+            0 0 .2rem #ff0000,
+            0 0 2rem rgb(254, 19, 54),
+            0 0 0.8rem rgb(254, 19, 54),
+            0 0 2.8rem rgb(254, 19, 54),
+            inset 0 0 1.4rem rgb(254, 19, 54);
+            background-color: rgb(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes imgAnimation {
+    from {
+        opacity: 0.7;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes headerAnimation {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+        text-shadow: 0 0 .2rem #ff0000,
+    0 0 .1rem #ff0000,
+    0 0 1rem rgb(254, 19, 54),
+    0 0 0.4rem rgb(254, 19, 54),
+    0 0 1.4rem rgb(254, 19, 54);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+        text-shadow: 0 0 .2rem #ff0000;
+    }
+}

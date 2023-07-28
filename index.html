@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <title>Rock-Paper-Scissors</title>
+    
 </head>
 <body>
+    <div class="header">
+        <h1>Make your choice mortal!</h1>
+    </div>
+    <div class="page-container">
+        <div class="content-container">
+            <div class="result-container">
+                <div class="num-of-rounds">
+                    Number of rounds
+                    <p id="num-of-rounds">0</p>
+                </div>
+                <div class="wins-container">
+                    <div class="wins-tracker">
+                        Mortals
+                        <p id="mortals-win">0</p>
+                    </div>
+                    <div class="wins-tracker">
+                        Demons
+                        <p id="demons-win">0</p>
+                    </div>
+                </div>
+                <div class="winner-announcer-container">
+                    <p id="winner-announcement">Who wins?</p>
+                </div>
+            </div>
+            <div class="choice-container">
+                <div class="choice-img-container-rock">
+                    <button><img id = "rock-btn" class="choice-img-rock" src="images/rock.png" alt="Mighty rock"></a></button>
+                </div>
+                <div class="choice-img-container-paper">
+                    <button><img id = "paper-btn" class="choice-img-paper" src="images/paper.png" alt="Fluid paper"></button>
+                </div>
+                <div class="choice-img-container-scissors">
+                    <button><img id = "scissors-btn" class="choice-img-scissors" src="images/scissors.png" alt="Sharp scissors"></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+                <div class="newbie">
+                    <a class="newbie-href" href="https://github.com/NikolaMilinkovic" target="_blank">Made by a complete css newbie!</a>
+                </div>
+        </div>
+
+    </div>
     <script src="javascript.js"></script>
 </body>
 </html>
