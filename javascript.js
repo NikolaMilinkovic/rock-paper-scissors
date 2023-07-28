@@ -71,7 +71,7 @@ function playRound(){
         computerScore++;
         document.getElementById("demons-win").innerHTML = computerScore;
         document.getElementById("winner-announcement").style.color = "red";
-        document.getElementById("winner-announcement").innerHTML = "Deamons take this one!";
+        document.getElementById("winner-announcement").innerHTML = "Deamon wins!";
         checkRound();
         return;
     }
