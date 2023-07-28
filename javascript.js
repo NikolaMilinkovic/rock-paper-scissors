@@ -78,20 +78,15 @@ function playRound(){
 }
 
 function checkRound(){
-    if (numberOfRounds === 5) {
-        if (playerScore > computerScore){
-            alert ("The human race is saved, you won!")
-        }
-        else if (computerScore > playerScore){
-            alert("The human race is doomed, you lost...")
-        }
-        else {
-            alert("You are tied! Keep fighting until we have a winner!")
-        }
+    if (playerScore === 5){
+        alert ("The human race is saved, you won!");
+    }
+    else if (computerScore === 5){
+        alert("You lost, human race is doomed..");       
     }
     else {
         return;
-    }
+    }        
 }
 
 function resetGame(){
