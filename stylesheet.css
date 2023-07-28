@@ -143,7 +143,7 @@ button {
     padding: 0px;
     background-color: #282b2f;
     color: #d31f37;
-    font-size: 38px;
+    font-size: max(2vw, 20px);
     font-weight: bold;
     border-bottom: 2px solid black;
 }
