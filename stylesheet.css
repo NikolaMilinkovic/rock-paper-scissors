@@ -26,7 +26,6 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-position-y: 1dvw;
 }
 
 .choice-container,
@@ -201,6 +200,7 @@ p#winner-announcement {
     align-items: center;
 }
 .footer-container {
+    margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: center;
