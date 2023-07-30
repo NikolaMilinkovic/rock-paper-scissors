@@ -28,8 +28,19 @@
                         <p id="demons-win">0</p>
                     </div>
                 </div>
+                
+            </div>
+            <div class="display-winner-container">
+                <div id="player-choice-container">
+                    <canvas height="1" width="1"></canvas>
+                        <img id = "player-choice-img" src="images/150_rock.png" alt="Mighty rock"></a>
+                    
+                </div>
                 <div class="winner-announcer-container">
                     <p id="winner-announcement">Who wins?</p>
+                </div>
+                <div id="computer-choice-container">
+                    <img id = "computer-choice-img" class="computer-choice-rock" src="images/150_rock.png" alt="Mighty rock"></a>
                 </div>
             </div>
             <div class="choice-container">
@@ -51,6 +62,11 @@
         </div>
 
     </div>
+    <div class="restartContainer" id="restartContainer">
+        <p class="end-game-message" id="end-game-message"></p>
+        <button class="btn-restart" id="btn-restart">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
     <script src="javascript.js"></script>
 </body>
 </html>
