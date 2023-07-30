@@ -29,7 +29,8 @@ body {
 }
 
 .choice-container,
-.result-container {
+.result-container,
+.display-winner-container {
     animation: transitionIn 3s;
 }
 
