@@ -6,12 +6,9 @@ let numberOfRounds = 0;
 let playerChoice = null;
 let ties = 0;
 
-function choices(){
-    console.log("player choice is " + playerChoice);
-    console.log("computer choice is " + computerChoice);
-}
-
-// Rock button
+// Choice buttons
+// Rock button 
+// (style.transform values display the hidden images by rotating them on Y axis)
 const rockbtn = document.getElementById("rock-btn");
 rockbtn.addEventListener('click', function handleClick(event) {
 playerChoice = "rock";
@@ -20,7 +17,9 @@ document.getElementById("computer-choice-container").style.transform = "rotateY(
 document.getElementById("player-choice-img").src="images/150_rock.png";
 playRound();
 });
-// Paper button
+
+// Paper button 
+// (style.transform values display the hidden images by rotating them on Y axis)
 const paperbtn = document.getElementById("paper-btn");
 paperbtn.addEventListener('click', function handleClick(event) {
 playerChoice = "paper";
@@ -29,7 +28,9 @@ document.getElementById("computer-choice-container").style.transform = "rotateY(
 document.getElementById("player-choice-img").src="images/150_paper.png";
 playRound();
 });
+
 // Scissors button
+// (style.transform values display the hidden images by rotating them on Y axis)
 const scissorsbtn = document.getElementById("scissors-btn");
 scissorsbtn.addEventListener('click', function handleClick(event) {
 playerChoice = "scissors";
@@ -39,27 +40,25 @@ document.getElementById("player-choice-img").src="images/150_scissors.png";
 playRound();
 });
 
-// Returns computers choice
+// Returns computers choice by generating random number from 1 to 3 and assigning string value
 function getComputerChoice (){  
     const computerChoice = Math.floor(Math.random() * 3 + 1);
         if (computerChoice === 1){
             document.getElementById("computer-choice-img").src="images/150_rock.png";
-            console.log("computer choice is " + computerChoice);
             return "rock";
         }
         else if (computerChoice === 2){
             document.getElementById("computer-choice-img").src="images/150_paper.png";
-            console.log("computer choice is " + computerChoice);
             return "paper";
         }
         else {
             document.getElementById("computer-choice-img").src="images/150_scissors.png";
-            console.log("computer choice is " + computerChoice);
             return "scissors";
         }
     }
 
-// Plays a round of rock paper scissors
+// Plays a round of rock paper scissors using players string choice and getComputerChoice() function
+
 function playRound(){
     const player = playerChoice;
     const computer = getComputerChoice ();
@@ -71,8 +70,7 @@ function playRound(){
     if (player === computer) {
         
         ties++;
-        document.getElementById("winner-announcement").style.color = "white";
-        document.getElementById("winner-announcement").innerHTML = "It is a tie!";
+        tieAnnouncement()
         checkRound();
         return;
     }
@@ -81,21 +79,36 @@ function playRound(){
              player === "paper" && computer === "rock") {
         
         playerScore++;
-        document.getElementById("mortals-win").innerHTML = playerScore;
-        document.getElementById("winner-announcement").style.color = "lime";
-        document.getElementById("winner-announcement").innerHTML = "You win!";
+        playerRoundWinAnnouncement();
         checkRound();
         return;
     }
     else {
         
         computerScore++;
-        document.getElementById("demons-win").innerHTML = computerScore;
-        document.getElementById("winner-announcement").style.color = "red";
-        document.getElementById("winner-announcement").innerHTML = "Deamon wins!";
+        computerRoundWinAnnouncement();
         checkRound();
         return;
     }
+}
+
+// Functions used by playRound() function
+
+function tieAnnouncement() {
+    document.getElementById("winner-announcement").style.color = "white";
+    document.getElementById("winner-announcement").innerHTML = "It is a tie!";
+}
+
+function playerRoundWinAnnouncement() {
+    document.getElementById("mortals-win").innerHTML = playerScore;
+    document.getElementById("winner-announcement").style.color = "lime";
+    document.getElementById("winner-announcement").innerHTML = "You win!";
+}
+
+function computerRoundWinAnnouncement() {
+    document.getElementById("demons-win").innerHTML = computerScore;
+    document.getElementById("winner-announcement").style.color = "red";
+    document.getElementById("winner-announcement").innerHTML = "Deamon wins!";
 }
 
 function checkRound(){
@@ -131,6 +144,8 @@ function checkRound(){
     }        
 }
 
+// End game functions
+
 function resetGame(){
     document.getElementById("num-of-rounds").innerHTML = 0;
     document.getElementById("mortals-win").innerHTML = 0;
@@ -144,15 +159,14 @@ function resetGame(){
     ties = 0;
 }
 
-function openRestartContainer() {
-    
-    document.getElementById("restartContainer").style.transform = "translate(-50%, -50%) scale(1)";
-    document.getElementById("overlay").style.display = "block";
+    function openRestartContainer() {
+        document.getElementById("restartContainer").style.transform = "translate(-50%, -50%) scale(1)";
+        document.getElementById("overlay").style.display = "block";
   }
   
-  function closeRestartContainer() {
-    document.getElementById("restartContainer").style.transform = "translate(-50%, -50%) scale(0)";
-    document.getElementById("overlay").style.display = "none";
+    function closeRestartContainer() {
+        document.getElementById("restartContainer").style.transform = "translate(-50%, -50%) scale(0)";
+        document.getElementById("overlay").style.display = "none";
   }
 
 //   Restart game button
@@ -164,44 +178,3 @@ function openRestartContainer() {
         document.getElementById("player-choice-container").style.transform = "rotateY(90deg)";
         document.getElementById("computer-choice-container").style.transform = "rotateY(90deg)";
     });
-
-function stats(){
-    console.log(playerScore);
-    console.log(playerChoice);
-
-    console.log(computerScore);
-
-    console.log(ties);
-    console.log(numberOfRounds);
-}
-
-
-// function checkRoundTie(){
-//     if (numberOfRounds === 5) {
-//         document.getElementById("num-of-rounds").innerHTML = numberOfRounds;
-//         alert("game over!");
-//     }
-//     else {
-//         return;
-//     }
-// }
-
-// function checkRoundPlayerWin(){
-//     if (numberOfRounds === 5) {
-//         document.getElementById("mortals-win").innerHTML = playerScore;
-//         alert("game over!");
-//     }
-//     else {
-//         return;
-//     }
-// }
-
-// function checkRoundComputerWin(){
-//     if (numberOfRounds === 5) {
-//         document.getElementById("demons-win").innerHTML = computerScore;
-//         alert("game over!");
-//     }
-//     else {
-//         return;
-//     }
-// }

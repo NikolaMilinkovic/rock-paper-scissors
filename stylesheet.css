@@ -28,6 +28,34 @@ body {
     background-position: center center;
 }
 
+/* Header */
+
+.header {
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #282b2f;
+    color: #d31f37;
+    font-size: max(2vw, 20px);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+h1 {
+    justify-content: center;
+    display: flex;
+    flex: 0 2 auto;
+    margin: 1rem;
+    animation: headerAnimation 3s;
+    text-align: center;
+}
+
+/* Content */
+
 .choice-container,
 .result-container,
 .display-winner-container {
@@ -44,7 +72,6 @@ body {
     margin-left: 0%;
     margin-right: 0%;
     background-color: rgba(0, 0, 0,0.6);
-    /* background-color: rgb(17, 51, 56); */
     height: 100%;
 }
 
@@ -194,30 +221,6 @@ button {
     animation: hoverEffects 0.5s forwards;
 }
 
-.header {
-    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex: auto;
-    justify-content: center;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    background-color: #282b2f;
-    color: #d31f37;
-    font-size: max(2vw, 20px);
-    font-weight: bold;
-    border-bottom: 2px solid black;
-}
-
-h1 {
-    justify-content: center;
-    display: flex;
-    flex: 0 2 auto;
-    margin: 1rem;
-    animation: headerAnimation 3s;
-    text-align: center;
-}
-
 p {
     display: flex;
     flex: auto;
@@ -230,7 +233,6 @@ p {
     flex-wrap: wrap;
     font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
     font-size: calc(1rem + 2vw);
-    /* font-size: 46px; */
     font-weight: bold;
     text-align: center;
     justify-content: center;
@@ -262,6 +264,9 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+/* Footer */
+
 }
 .footer-container {
     margin-top: auto;
@@ -286,6 +291,84 @@ p {
 .newbie-href:hover {
     color: white;
 }
+
+/* End game / Game restart prompt window */
+
+.restartContainer {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    min-width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid white;
+    box-shadow: 0 0 .2rem #ff0000,
+            0 0 .1rem #ff0000,
+            0 0 1rem rgb(254, 19, 54),
+            0 0 0.4rem rgb(254, 19, 54),
+            0 0 1.4rem rgb(254, 19, 54),
+            inset 0 0 0.7rem rgb(254, 19, 54); 
+    background-color: rgb(0, 0, 0, 1);
+}
+
+.end-game-message {
+    display: flex;
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: calc(2rem + 1.5vw);
+    font-weight: bold;
+}
+
+p.end-game-message {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-restart {
+    font-size: inherit;
+    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 .2rem #ff0000,
+            0 0 .1rem #ff0000,
+            0 0 1rem rgb(254, 19, 54),
+            0 0 0.4rem rgb(254, 19, 54),
+            0 0 1.4rem rgb(254, 19, 54),
+            inset 0 0 0.7rem rgb(254, 19, 54);
+}
+
+.btn-restart:hover {
+    animation: restartBtnHover 0.3s forwards;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    background-image: url("thresh.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Animations */
 
 @keyframes transitionIn {
     from {
@@ -398,78 +481,3 @@ p {
             inset 0 0 1.4rem #00fff2;
     }
 }
-
-.restartContainer {
-    position: fixed;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 25%;
-    min-width: 300px;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    user-select: none;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
-    border: 2px solid white;
-    box-shadow: 0 0 .2rem #ff0000,
-            0 0 .1rem #ff0000,
-            0 0 1rem rgb(254, 19, 54),
-            0 0 0.4rem rgb(254, 19, 54),
-            0 0 1.4rem rgb(254, 19, 54),
-            inset 0 0 0.7rem rgb(254, 19, 54); 
-    background-color: rgb(0, 0, 0, 1);
-  }
-  
-  .end-game-message {
-    display: flex;
-    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    font-size: calc(2rem + 1.5vw);
-    font-weight: bold;
-  }
-
-  p.end-game-message {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .btn-restart {
-    font-size: inherit;
-    font-family: nightmare_pillsregular, Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px 20px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-    color: white;
-    cursor: pointer;
-    border: 2px solid white;
-    box-shadow: 0 0 .2rem #ff0000,
-            0 0 .1rem #ff0000,
-            0 0 1rem rgb(254, 19, 54),
-            0 0 0.4rem rgb(254, 19, 54),
-            0 0 1.4rem rgb(254, 19, 54),
-            inset 0 0 0.7rem rgb(254, 19, 54);
-  }
-
-  .btn-restart:hover {
-    animation: restartBtnHover 0.3s forwards;
-  }
-  
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.8;
-    background-image: url("thresh.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
