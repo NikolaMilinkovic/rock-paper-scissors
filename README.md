@@ -1,5 +1,13 @@
-# Rock-paper-scissors
-A small JS introductory project made during the completion of Odin Project.
-I do not own any of the images used in the project, all right go to their respective owners.
-This is just a personal practice project.
-https://nikolamilinkovic.github.io/rock-paper-scissors/
+![Example Image](/images/rps.png)
+
+# Rock Paper Scissors
+Basic Rock-Paper-Scissors game played vs PC.<br>
+I do not own images used in this project, all the rights go to their respective owners.
+
+[Live Demo](https://nikolamilinkovic.github.io/rock-paper-scissors/) ✨
+
+**🧭 Possible Future Implementations**
+- Multiplayer mode
+
+## 💻 Built With
+![javascript](https://skillicons.dev/icons?i=js,html,css&perline=10)
